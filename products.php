@@ -772,9 +772,10 @@ $currentParams = [
                 <tbody>
                 <?php if ($result->num_rows > 0): ?>
 
-                    <?php while ($product = $result->fetch_assoc()): ?>
+                    <?php $no = $offset + 1; ?>
+<?php while ($product = $result->fetch_assoc()): ?>
                         <tr>
-                            <td><?= (int) $product["id"] ?></td>
+                            <td><?= $no++ ?></td>
 
                             <td>
                                 <?= htmlspecialchars(
